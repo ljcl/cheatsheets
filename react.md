@@ -405,21 +405,28 @@ New features
 {: .-three-column}
 
 ### Returning fragments
+{: .-prime}
+```js
+import { Fragment } from 'react';
+```
 
 ```js
 render () {
-  // Don't forget the keys!
-  return [
-    <li key="A">First item</li>,
-    <li key="B">Second item</li>
-  ]
+  return (
+    <Fragment>
+      Text
+      <h2>Heading</h2>
+      More Text
+      <strong>Bold text</strong>
+    </Fragment>
+  )
 }
 ```
 {: data-line="3,4,5,6"}
 
 You can return multiple nodes as arrays.
 
-See: [Fragments and strings](https://reactjs.org/blog/2017/09/26/react-v16.0.html#new-render-return-types-fragments-and-strings)
+See: [Fragments and strings](https://reactjs.org/blog/2017/11/28/react-v16.2.0-fragment-support.html#what-are-fragments)
 
 ### Returning strings
 
